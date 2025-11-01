@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - PaymentRequestInfo
-public struct PaymentRequestInfo: Codable {
+public struct PaymentRequestInfo: Codable, Sendable {
 
     public let amount: Int
     public let currency: String
@@ -30,7 +30,7 @@ public struct PaymentRequestInfo: Codable {
 }
 
 // MARK: - PaymentDetails
-public struct PaymentDetails: Codable {
+public struct PaymentDetails: Codable, Sendable {
     public let type: String
     public let number: String
     public let month: String
@@ -47,7 +47,7 @@ public struct PaymentDetails: Codable {
 }
 
 // MARK: - FraudDetails
-public struct FraudDetails: Codable {
+public struct FraudDetails: Codable, Sendable {
     public let customerIP: String
     public let customerEmail: String
     

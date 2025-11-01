@@ -69,7 +69,7 @@ private enum RequestMethod: String {
 }
 
 // MARK: - TransactionError
-private enum TransactionError: Error, LocalizedError {
+enum TransactionError: Error, LocalizedError {
     case missingAPIKey
     case invalidResponse
     case apiError(statusCode: Int, message: String)
